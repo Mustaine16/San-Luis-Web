@@ -1,0 +1,653 @@
+:root{
+    --color-barra:linear-gradient(90deg,rgba(114,39,137,.6) 0,rgba(237,15,104,.7));
+    --color-fondo: linear-gradient(90deg,rgba(245,183,25,.95) 0,rgba(223,24,100,.8));
+    --naranja:#cb6120;
+    --verde-claro:#a2bd31;
+    --verde-oscuro:#326534;
+    --rosa:#bf3276;
+    --amarillo:#e5b449;
+    --rojo:#a01127;
+    --azul:#618dc5;
+    --verde-agua:#5ea099;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    /* overflow-y: hidden; */
+    /* box-sizing: content-box; */
+    transition: all .3s;
+}
+
+/* Fondo Principal */
+
+.fondo{
+    display: flex;
+    width: 100%;
+    height:1080px;
+    background: url(img/fondo.png) no-repeat;
+    background-attachment:cover;
+    background-position: center center;
+    background-size:cover;
+    flex-direction: column;
+}
+    
+
+/* Barra de Navegacion Superior */
+
+nav{
+    display:grid;
+    grid-template-columns: 0.5fr 6.5fr 1fr;
+    max-width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding-right: 15px;
+    background-image: var(--color-barra);
+    justify-content: space-between;
+}
+     nav img {
+        width:80px;
+        margin-left: 5px;
+    }
+
+    ul{
+        display: flex;
+        margin-left: 20px;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li{list-style-type: none;
+       margin-right: 70px;}
+       li a:hover{
+        color:#722789;
+       }
+
+    li a{
+        display: block;
+        padding: 20px 10px;
+        /* margin-right: 40px; */
+        font-size: 22px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color:wheat;
+        transition: .15s;
+        /* position: relative; */
+    }
+        li a::after{
+            content: "";
+            display: block;
+            /* position: absolute; */
+            bottom: 1px;
+            height: 3px;
+            background: #722789;
+            transform: scale(0,1);
+            transition: .55s;
+        }
+        li a:hover::after{
+            transform: scale(1,1)
+        }
+
+    .search{
+        position: relative;
+        margin: 25px 30px 15px 0px;
+        width: 200px;
+        background: #f7f7f7;
+        border-radius: 500px;
+        border:transparent;
+        outline: none;
+    }
+        .search object{
+            position: absolute;
+            width:30px;
+            right: 12px;
+            bottom: 15px;
+        }
+
+        #search{
+            position: relative;
+            margin: 2px;
+            width: 100px;
+            padding: 15px;
+            background: #f7f7f7;
+            border-radius: 500px;
+            border:transparent;
+            outline: none;
+            font-size: 20px
+        }
+
+        /* Transiciones :hover */
+
+        #search , .search{
+            transition: .3s;
+        }
+        .search:hover, .search:focus{
+            width: 250px;
+        }
+        #search:hover , #search:focus{
+            width: 170px;
+        }
+/* Imagen San Luis */
+.fondo>img{
+ margin: auto;
+ width: 500px;
+ transition: .3s;
+}
+    .fondo>img:hover{
+        width: 600px;
+    }
+
+/* Contenedor para seccion de Turismo */
+
+.contain-turismo{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 800px;
+    margin: 0px;
+}
+
+/* Columna Izquierda */
+
+    .izquierda, .derecha{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr, 2);
+        position: relative;
+    }
+        .izq-superior{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        margin:0;
+        }
+        .izq-inferior{
+            position: absolute;
+            bottom:0;
+            left:0;
+            width: 100%;
+            margin:0;
+        }
+
+/* Columna Derecha */
+
+        .der-superior{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 100%;
+            margin:0;
+        }
+        .der-inferior{
+            position: absolute;
+            bottom:0;
+            right:0;
+            width: 100%;
+            margin:0;
+        }
+
+/* Main Turismo */
+
+.contenedor-turismo-mosaico{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr ;
+    /* height: 100%; */
+}
+
+    /*Parte superior del mosaico, con sus respectivos titulos */
+
+    .titulo-recorrido{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        /* text-align: center; */
+    }
+        
+        .recorridos{
+            margin-top: 18px;
+            font-size: 55px;
+            font-weight: bold;
+            color: #722789;
+        }
+        .zona{
+            padding: 2px 30px;
+            margin-top: 10px;
+            font-size: 45px;
+            font-weight: 400;
+            color: #f7f7f7;
+            background: #722789;
+            text-transform: uppercase;
+        }
+    
+    /* Mosaico con 8 imagenes, seccionadas en Grid  */
+
+    .contenedor-turismo-mosaico > .turismo-mosaico{
+        margin: 40px auto;
+        /* max-width: 1024px; */
+        display: grid;
+        grid-template-columns: repeat(auto-fit,240px);
+        grid-template-rows: repeat(2, 270px);
+        grid-gap: 20px;
+        width: 100%;
+        justify-content: space-around;
+    } 
+    
+    /*----- Transiciones--------- */
+        .turismo-mosaico >a:hover .turismo-minibox img{
+            width: 220px;
+            height: 220px;
+        }
+        .turismo-mosaico >a:hover .turismo-minibox [class|=tit]{
+            font-size:1.7em;
+            background:currentColor;
+            z-index: 10;
+            padding: 5px;
+        }
+        .turismo-mosaico >a:hover .turismo-minibox [class|=tit] span{
+            color: rgb(248, 242, 230);
+        }
+
+
+        /*Se agrega position relative a cada Div padre de los 3 elementos  */
+
+        .turismo-minibox{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+            /* Imagenes de cada zona turistica */
+            .turismo-minibox > img{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                transition: .3s;
+                z-index: 2;
+            }
+
+            /* Posicionamiento de cada Imagen, estan orden de izquierda a derecha,y de arriba a abajo, los nombres estan relacionados respecto al posicionamiento de cada bloque color*/
+
+            .img-izq{
+                top:10px;
+                left: 10px;
+            }
+            .img-up{
+                top:5px;
+                right: 10px;
+            }
+            .img-bottom{
+                top:6px;
+                left:10px;
+            }
+            .img-der{
+                left:0;
+                top:8px;
+            }
+            
+
+            /* Posicionamiento de cada bloque de color */
+
+            [div|=block]{position: absolute;}
+
+            .block-izq{
+                left: 0;
+                width: 40%;
+                height: 95%;
+            }
+            .block-up{
+                top:0;
+                width: 100%;
+                height:30%;
+            } 
+            .block-bottom{
+                position: absolute;
+                display: block;
+                left: 0;
+                top:135px;
+                width: 100%;
+                height: 30%;
+            }     
+            .block-der{
+                position: absolute;
+                right:0;
+                width: 35%;
+                height: 80%;
+            }
+
+            /* Color para cada bloque */
+
+            .naranja{
+                background:var(--naranja);
+            }
+            .verde-claro{
+                background: var(--verde-claro);
+            }
+            .verde-oscuro{
+                background-color: var(--verde-oscuro);
+            }
+            .rosa{
+                background: var(--rosa);
+            }
+            .amarillo{
+                background: var(--amarillo);
+            }
+            .rojo{
+                background: var(--rojo);
+            }
+            .azul{
+                background: var(--azul);
+            }
+            .verde-agua{
+                background: var(--verde-agua);
+            }
+
+            /* Titulos de casa zona turistica 
+                Ordenados de izquierda a derecha, de arriba a abajo, igual que los demas elementos de arriba */
+
+            .turismo-minibox > [class|="tit"]{
+                position: absolute;
+                display: flex; 
+                flex-direction: column;
+                text-transform:uppercase;
+                font-size: 1.5em;
+                line-height: 1em;
+                font-weight: 600;
+            }
+
+            .tit-izq{
+                right: 8%;
+                bottom: 0;
+            }
+            .tit-up{
+                bottom: 0;
+                left:13%;
+            }
+            .tit-bottom{
+                left:10px;
+                bottom: 0;
+            }
+            .tit-der{
+                left:0;
+                bottom: 0;
+            }
+
+/*------------- Bloques de Eventos  -----------*/
+
+/* Contenedor Padre */
+.container-eventos{
+   position: relative;
+    height: 850px;
+    width: 100%;
+    background:linear-gradient(90deg,rgba(245,183,25,.95) 0,rgba(223,24,100,.8));
+}
+
+/* Div con los titulos de la seccion */
+
+    .titulos{
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        /* Imagenes de los costados */
+
+        .arr-izq{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 700px;
+            z-index: 0;
+        }
+        .arr-der{
+            position: absolute;
+            top:0;
+            right:0;
+            width: 580px;
+            z-index: 0;
+        }
+        .abajo-izq{
+            position: absolute;
+            bottom:-80px;
+            left:0;
+            width: 580px;
+            z-index: 0;
+        }
+        .abajo-der{
+            position: absolute;
+            bottom:-50px;
+            right:0;
+            width: 580px;
+            z-index: 0;
+        }
+
+        /* Estilos de Titulos */
+
+        .titulos > h2{
+            margin-top: 20px;
+            padding: 10px;
+            font-size:3em;
+            color: rgb(243, 248, 253);
+            background: #a01127;
+
+        }
+        .titulos > span{
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 2.5em;
+            color: #e5b449;
+            background: #722789;
+        }
+    
+    /* Los Tres eventos,con su respectivo padre */
+
+    .main-eventos{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 30px;
+        margin: 50px auto;
+        width:50%;
+        height: 480px;
+        /* background: #000; */
+    }
+        .bloque{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 90%;
+            height: 90%;
+            text-align: center;
+            box-shadow: 1px 1px 10px 1px #000;
+            cursor: pointer;
+        }
+            .bloque:hover{
+                /* width: 100%; */
+                /* height: 100%; */
+                background: rgba(0,0,0, 0.2)
+            }
+        .bloque > span, h3{
+            padding: 20px;
+            color: snow;
+            text-transform: uppercase;
+            background:linear-gradient(90deg,rgba(114,39,137,.95) 0,rgba(237,15,104,.8));
+        }
+
+ /* -----------------
+
+        FOOTER
+
+ ------------------- */
+
+footer{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background: #722789;
+}
+
+/* Logo */
+
+    footer > img{
+        width: 200px;
+        display: block;
+        margin:auto;
+    }
+
+/* Ministerio y numeros de contacto */
+
+        .ministerio{
+    display: flex;
+    flex-direction: column;
+    /* height: 80%; */
+    text-align: center;
+    justify-content: space-between;
+        }
+        footer h3{
+         font-size: 28px;
+         /* background: var(--color-fondo); */
+         /* -webkit-background-clip: text; */
+         /* color:transparent;  */
+        }
+        footer span, footer a{
+            color:#f7f7f7;
+            line-height: 1.8em;
+            text-decoration: none;
+        }
+
+/* Redes Sociales */
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        /* height: 75%; */
+        margin-top: 10px;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .social img{
+            width: 1.3em;
+            margin-right: 10px;
+        }
+        .social a{
+            display: inline-block;
+            justify-content: center;
+            align-items: stretch;
+            margin: 5px;
+            transition: all .3s;
+        }
+        .social a:hover img{
+            width: 1.7em;
+        }
+
+/* Logo del Ministerio */
+
+        .institucional img{
+            width: 400px;
+            margin: auto;
+            display: block;
+        }
+
+
+/* -----------------
+    MEDIA QUERIES
+--------------------*/
+
+@media all and (max-device-width:667px){
+
+/* ------------------------
+      FONDO PRINCIPAL
+            Y
+    BARRA DE NAVEGACION
+-------------------------*/
+
+    .fondo{
+        height: 100vh;
+    }
+    /* Barra de Navegacion */
+        nav{
+            grid-template-columns: repeat(2, 1fr)
+        }
+        nav div img{
+            margin-top: 8px;
+        }
+        nav ul{
+            display: none;
+        }
+        nav .search{
+            margin-right: 5px;
+        }
+    /* Imagen de texto "San Luis" */
+        .fondo >img{
+            width: 250px;
+        }
+        .fondo > img:hover{
+            width: 300px;
+        }
+
+/* -----------------------
+GRID MAIN DE ZONA TURISTICA
+----------------------- */
+         .contain-turismo{
+             height: 2700px;
+         }
+         .contenedor-turismo-mosaico{
+            grid-template-rows: 0.4fr 4fr;
+         }
+         .main-eventos {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            row-gap: 40px;
+            width: 100%;
+            height: 80%;
+        }
+        .container-eventos {
+            position: relative;
+            height: 1550px;
+            width: 100%;
+        }
+        .bloque{
+            width: 95%;
+            height: 100%;
+            margin: auto;
+        }
+    
+/* ---------------
+      FOOTER 
+----------------*/
+
+    footer{
+    grid-template-columns: 1fr;
+    height: auto;
+    grid-gap: 30px;
+    }
+    /* Logo del Ministerio */
+    .institucional img{
+        width:100vw;
+    }
+    /* ------------------------------------------------
+     Arreglando problema de Overflow-x en la seccion de 
+                        3 Eventos 
+    --------------------------------------------------*/
+    .container-eventos > img{
+        display: none;
+    }
+}

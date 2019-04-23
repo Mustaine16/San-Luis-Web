@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Fondo principal y barra de navegacion -->
+    <div class="fondo">
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="Turismo"></a>
+            </div>
+            <ul>
+                <li><a href="#">¡Visitanos!</a></li>
+                <li><a href="#">Planificar</a></li>
+                <li><a href="#">Galeria</a></li>
+            </ul>
+            <form action="" class="search"> 
+                <input type="text"  id="search" placeholder="Buscar...">
+                <object height="30px" width="30px"data="img/search.svg" type="image/svg+xml"></object>
+            </form>  
+        </nav>
+        <img src="img/san-luis.png" alt="San Luis">
+    </div>
+    <!-- Contenedor padre de las 3 columnas(2 manchas y el turismo) -->
+    <div class="contain-turismo">
+        <!-- Columan izquierda con manchas -->
+        <div class="izquierda">
+            <img class="izq-superior"src="img/mancha-superior-izquierda.png" alt="">
+            <img class="izq-inferior"src="img/mancha-inf-izqpng.png" alt="">
+        </div>
+        <!-- Columna central -->
+        <div class="contenedor-turismo-mosaico">
+            <!-- Titulo violeta -->
+            <div class="titulo-recorrido">
+                <span class="recorridos">Recorridos</span><span class="zona">Zona Turistica</span>
+            </div>
+            <!-- Mosaico Grid -->
+            <div class="turismo-mosaico">
+                <!-- Cada A-HREF son los 8 mini-box con foto y titulo -->
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-izq" src="img/1-sierras-centrales.jpg" alt="">
+                        <div class="block-izq naranja"></div>
+                        <div class="tit-izq" style="color:var(--naranja)">
+                            <span>Sierras</span>
+                            <span>Centrales</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-up" src="img/2-norte-puntano.jpg" alt="">
+                        <div class="block-up verde-claro"></div>
+                        <div class="tit-up" style=color:var(--verde-claro)>
+                            <span>Norte</span>
+                            <span>Puntano</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-bottom" src="img/3-costa-come.jpg" alt="">
+                        <div class="block-bottom verde-oscuro"></div>
+                        <div class="tit-bottom" style="color:var(--verde-oscuro)">
+                            <span>Costa de los</span>
+                            <span>Comechingones</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-der" src="img/4-valle-conlara.jpg" alt="">
+                        <div class="block-der rosa"></div>
+                        <div class="tit-der" style="color:var(--rosa)">
+                            <span>Valle del Conlara</span>
+                            <span>y san martín</span>                       
+                         </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-izq" src="img/5-villa-mercedes.jpg" alt="">
+                        <div class="block-bottom amarillo"></div>
+                        <div class="tit-bottom" style="color:var(--amarillo)">
+                            <span>Villa Mercedes</span>
+                            <span>Y el Morro</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-der" src="img/6-huellas.jpg" alt="">
+                        <div class="block-der rojo"></div>
+                        <div class="tit-der" style="color:var(--rojo)">
+                            <span>Huellas</span>
+                            <span>Del pasado</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-izq" src="img/7-llanuras.jpg" alt="">
+                        <div class="azul block-up"></div>
+                        <div class="tit-up" style="color:var(--azul)">
+                            <span>Llanura</span>
+                            <span>Sureña</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="turismo-minibox">
+                        <img class="img-izq" src="img/8-termas-salinas.jpg" alt="">
+                        <div class="block-izq verde-agua"></div>
+                        <div class="tit-izq" style="color:var(--verde-agua)">
+                            <span>Termas y</span>
+                            <span>Salinas</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Columna Derecha con mancha -->
+        <div class="derecha">
+            <img class="der-superior" src="img/mancha-superior-derecha.png" alt="">
+            <img class="der-inferior"src="img/mancha-der-inf.png" alt="">
+        </div>
+    </div>
+    <!-- Contenedor padre de Agenda / 3 Eventos -->
+    <div class="container-eventos">
+        <!-- Cuatro manchas a los costados -->
+            <img class="arr-izq" src="img/evento-arriba-izq.png" alt="">
+            <img class="arr-der" src="img/evento-arriba-der.png" alt="">
+            <img class="abajo-izq" src="img/eventos-abajo-izq.png" alt="">
+            <img class="abajo-der" src="img/evento-abajo-der.png" alt="">
+        <!-- Titulos de encabezado -->
+        <div class="titulos">
+            <h2>Vivi San Luis</h2>
+            <span>Proximos Eventos!</span>
+        </div>
+        <!-- Bloque con eventos, divido en 3 con Grid -->
+        <div class="main-eventos">
+            <div class="primer bloque">
+                <h3>Feria de Pequeños y Medianos Productores</h3>
+                <img width="100%" src="img/event-1.jpg" alt="">
+                <span>Desde el 13/4/19 al 25/4/19</span>
+            </div>
+            <div class="segundo bloque">
+                <h3>San Luis Trap</h3>
+                <img width="100%" src="img/evento-2.jpeg" alt="">
+                <span>Desde el 18/4/19 al 20/4/19</span>
+            </div>
+            <div class="tercer bloque">
+                <h3>3º Festival de las Colectividades</h3>
+                <img width="100%" src="img/evento-3.jpg" alt="">
+                <span>Desde el 10/4/19 al 21/4/19</span>
+            </div>
+        </div>
+    </div>
+    <footer>
+ 
+        <img src="img/logo.png" alt="Ministerio de San Luis">
+ 
+        <div class="ministerio">
+            <h3>Ministerio de Turismo y Parques</h3>
+            <span>Av. Illia 35, esq. Junín</span>
+            <span>+54 (266) 4423479</span>
+            <span>+54 (266) 4423957</span>
+            <span>San Luis, Capital</span>
+        </div>
+        <div class="social">
+            <h3>Seguinos</h3>
+            <a href="#"><img src="img/fb.png" alt="">@TurismodeSanLuis</a>
+            <a href="#"><img src="img/tw.svg" alt="">@TurismodeSanLuis_</a>
+            <a href="#"><img src="img/instagram.svg" alt="">@Turismo_San_Luis</a>
+        </div>
+        <div class="institucional">
+            <img src="img/footer-ministerio.png" alt="">
+        </div>
+    </footer>
+
+    <script>
+        var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+    </script>
+</body>
+</html>
