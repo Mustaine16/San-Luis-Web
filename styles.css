@@ -644,6 +644,11 @@ footer{
             margin-right: 5px;
         }
 
+        .search{
+            display: none
+        }
+
+        
         .burger{
             display: block;
             margin-right: .5em
@@ -760,10 +765,6 @@ GRID MAIN DE ZONA TURISTICA
 }
 
 @media screen and (max-width:500px){
-
-    .search{
-        display: none
-    }
 
     .contain-turismo{
         height: 2700px;
