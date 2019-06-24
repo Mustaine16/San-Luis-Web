@@ -15,7 +15,7 @@
             <div class="logo">
                 <a href="#"><img src="img/logo.png" alt="Turismo"></a>
             </div>
-            <ul>
+            <ul class="menu">
                 <li><a href="#">¡Visitanos!</a></li>
                 <li><a href="#">Planificar</a></li>
                 <li><a href="#">Galeria</a></li>
@@ -23,7 +23,12 @@
             <form action="" class="search"> 
                 <input type="text"  id="search" placeholder="Buscar...">
                 <object height="30px" width="30px"data="img/search.svg" type="image/svg+xml"></object>
-            </form>  
+            </form> 
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div> 
         </nav>
         <img src="img/san-luis.png" alt="San Luis">
     </div>
@@ -184,17 +189,6 @@
         </div>
     </footer>
 
-    <script>
-        var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
-  }
-);
-    </script>
+<script src="main.js"></script>
 </body>
 </html>
