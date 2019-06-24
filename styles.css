@@ -130,12 +130,7 @@ nav{
         #search , .search{
             transition: .3s;
         }
-        .search:hover, .search:focus{
-            /* width: 250px; */
-        }
-        #search:focus , #search:hover{
-            /* width: 170px; */
-        }
+
 
         .burger{
             display: none
@@ -660,6 +655,28 @@ footer{
                 background: white;
             }
 
+            
+    /* Menu responsive */
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background: var(--color-barra);
+        top: 110px;
+        right: 0;
+        transform-origin: top;
+        transform: scale(1,0)
+    }
+        .menu-open{
+            transform: scale(1,1)
+        }
+        ul li{
+            margin: 0
+        }
+
+
 
     /* Imagen de texto "San Luis" */
         .fondo >img{
@@ -744,24 +761,8 @@ GRID MAIN DE ZONA TURISTICA
 
 @media screen and (max-width:500px){
 
-/* Menu responsive */
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    background: var(--color-barra);
-    top: 110px;
-    right: 0;
-    transform-origin: top;
-    transform: scale(1,0)
-}
-    .menu-open{
-        transform: scale(1,1)
-    }
-    ul li{
-        margin: 0
+    .search{
+        display: none
     }
 
     .contain-turismo{
